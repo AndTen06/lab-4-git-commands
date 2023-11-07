@@ -3,27 +3,103 @@ Exercise 1: Initializing a Git Repository
 2. Use the `git init` command to create a new Git repository in that directory.
 3. Verify that the repository has been created successfully. Use the `git status` command to check the status of your repository.
 4. How do you know it has initialized sucessfully?
+Answer: The initialized was a success as the it init status is Reinitialized existing Git repository in /workspaces/lab-4-git-commands/.git/    and git status says On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
 
 Exercise 2: Tracking Changes
 1. Create a new text file (e.g., "example.txt") in your repository.
 2. Use `git status` to see the status of your repository. What does it show?
+git add
+Answer: Nothing specified, nothing added.
 3. Use `git add` to stage the "example.txt" file for a commit.
-4. Check the status again using `git status`. What's the difference now?
+Answer: Nothing specified, nothing added.
+4. Check the status again using `git status`. What's the difference now?On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   anderson.txt
 
 Exercise 3: Making a Commit
 1. Use `git commit` to create a commit with the staged changes. Don't forget to provide a meaningful commit message.
+ $ git commit -m "hello there everyone "
+[main ebdfc12] hello there everyone
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
 2. Use `git status` to check the status of your repository once more. What does it show now?
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
 
 Exercise 4: Viewing Commit History
 1. Use `git log` to view the commit history of your repository. This will display a list of commits, including the commit message, author, date, and a unique commit hash.
+commit 919ec6cbb96add255eebf259ae38e2ca8caf8835 (HEAD -> main)
+Author: Anderson Tenecela <54958219+AndTen06@users.noreply.github.com>
+Date:   Tue Nov 7 13:02:28 2023 +0000
+
+    hello there everyone
+
+commit ebdfc12aed830f16ff26c5d8373b788ed247d415
+Author: Anderson Tenecela <54958219+AndTen06@users.noreply.github.com>
+Date:   Tue Nov 7 13:00:38 2023 +0000
+
+    hello there everyone
+
+commit bab7e37673323c78b5b2d56e0db72c617e2d7f0c
+Author: Anderson Tenecela <54958219+AndTen06@users.noreply.github.com>
+Date:   Tue Nov 7 12:51:45 2023 +0000
 2. Try adding the `--oneline` option to `git log` to display a more concise version of the commit history.
+919ec6c (HEAD -> main) hello there everyone
+ebdfc12 hello there everyone
+bab7e37 it is an amazing day
+47f6692 (origin/main, origin/HEAD) Create lab-4-git-commands.txt
 
 Exercise 5: Making More Changes
 1. Make additional changes to the "example.txt" file.
 2. Use `git status` to see the status of your repository. Are the changes detected?
+No changes are detected and the status remains the same
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
 3. Use `git add` to stage the new changes.
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   anderson.txt
 4. Create a new commit with the staged changes using `git commit`.
+ git checkout
+M       anderson.txt
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)    
 
 Exercise 6: Reviewing Commit History
 1. Use `git log` to view the updated commit history. You should now see the new commits you made.
 Paste them here:
+commit 919ec6cbb96add255eebf259ae38e2ca8caf8835 (HEAD -> main)
+Author: Anderson Tenecela <54958219+AndTen06@users.noreply.github.com>
+Date:   Tue Nov 7 13:02:28 2023 +0000
+
+    hello there everyone
+
+commit ebdfc12aed830f16ff26c5d8373b788ed247d415
+Author: Anderson Tenecela <54958219+AndTen06@users.noreply.github.com>
+Date:   Tue Nov 7 13:00:38 2023 +0000
+
+    hello there everyone
+
+commit bab7e37673323c78b5b2d56e0db72c617e2d7f0c
+Author: Anderson Tenecela <54958219+AndTen06@users.noreply.github.com>
+Date:   Tue Nov 7 12:51:45 2023 +0000
+
+    it is an amazing day
+:
